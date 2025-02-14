@@ -1,0 +1,300 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{846AC5F7-1486-416F-B53B-3DD3058AC5B5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnimalHealthHospitalManagementSystem</RootNamespace>
+    <AssemblyName>AnimalHealthHospitalManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\AnimalHospital.mdf" />
+    <Content Include="App_Data\AnimalHospital_log.ldf">
+      <DependentUpon>AnimalHospital.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Project\css\bootstrap.css" />
+    <Content Include="Project\css\chocolat.css" />
+    <Content Include="Project\css\flexslider.css" />
+    <Content Include="Project\css\font-awesome.css" />
+    <Content Include="Project\css\fontawesome-all.min.css" />
+    <Content Include="Project\css\jquery-ui.css" />
+    <Content Include="Project\css\minimal-slider.css" />
+    <Content Include="Project\css\style.css" />
+    <Content Include="Project\fonts\fontawesome-webfont.svg" />
+    <Content Include="Project\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Project\images\1.jpg" />
+    <Content Include="Project\images\10.jpg" />
+    <Content Include="Project\images\a1.jpg" />
+    <Content Include="Project\images\a2.jpg" />
+    <Content Include="Project\images\a3.jpg" />
+    <Content Include="Project\images\a4.jpg" />
+    <Content Include="Project\images\ab.jpg" />
+    <Content Include="Project\images\bg1.jpg" />
+    <Content Include="Project\images\animal1.jpg" />
+    <Content Include="Project\images\bg2.jpg" />
+    <Content Include="Project\images\animal2.jpg" />
+    <Content Include="Project\images\animal3.jpg" />
+    <Content Include="Project\images\animal4.jpg" />
+    <Content Include="Project\images\animal5.jpg" />
+    <Content Include="Project\images\animal6.jpg" />
+    <Content Include="Project\images\animal7.jpg" />
+    <Content Include="Project\images\animal8.jpg" />
+    <Content Include="Project\images\arrow.png" />
+    <Content Include="Project\images\banner1.jpg" />
+    <Content Include="Project\images\banner2.jpg" />
+    <Content Include="Project\images\bg3.jpg" />
+    <Content Include="Project\images\bg4.jpg" />
+    <Content Include="Project\images\c1.png" />
+    <Content Include="Project\images\c2.png" />
+    <Content Include="Project\images\c3.png" />
+    <Content Include="Project\images\cal.png" />
+    <Content Include="Project\images\cal1.png" />
+    <Content Include="Project\images\close.png" />
+    <Content Include="Project\images\g1.jpg" />
+    <Content Include="Project\images\g2.jpg" />
+    <Content Include="Project\images\g3.jpg" />
+    <Content Include="Project\images\g4.jpg" />
+    <Content Include="Project\images\g5.jpg" />
+    <Content Include="Project\images\g6.jpg" />
+    <Content Include="Project\images\g7.jpg" />
+    <Content Include="Project\images\g8.jpg" />
+    <Content Include="Project\images\g9.jpg" />
+    <Content Include="Project\images\left.png" />
+    <Content Include="Project\images\move-top.png" />
+    <Content Include="Project\images\overlay.png" />
+    <Content Include="Project\images\right.png" />
+    <Content Include="Project\images\t1.jpg" />
+    <Content Include="Project\images\t2.jpg" />
+    <Content Include="Project\images\t3.jpg" />
+    <Content Include="Project\images\te1.jpg" />
+    <Content Include="Project\images\te2.jpg" />
+    <Content Include="Project\images\te3.jpg" />
+    <Content Include="Project\js\bars.js" />
+    <Content Include="Project\js\bootstrap.js" />
+    <Content Include="Project\js\counterup.min.js" />
+    <Content Include="Project\js\easing.js" />
+    <Content Include="Project\js\jquery-2.1.4.min.js" />
+    <Content Include="Project\js\jquery-2.2.3.min.js" />
+    <Content Include="Project\js\jquery-ui.js" />
+    <Content Include="Project\js\jquery.chocolat.js" />
+    <Content Include="Project\js\jquery.flexslider.js" />
+    <Content Include="Project\js\jquery.vide.min.js" />
+    <Content Include="Project\js\minimal-slider.js" />
+    <Content Include="Project\js\move-top.js" />
+    <Content Include="Project\js\responsiveslides.min.js" />
+    <Content Include="Project\js\SmoothScroll.min.js" />
+    <Content Include="Project\js\waypoints.min.js" />
+    <Content Include="Project\video\farm.jpg" />
+    <Content Include="Project\video\farm.mp4" />
+    <Content Include="Project\Home.aspx" />
+    <Content Include="Project\About.aspx" />
+    <Content Include="Project\Gallery.aspx" />
+    <Content Include="Project\Contact.aspx" />
+    <Content Include="Project\Registration.aspx" />
+    <Content Include="Project\Login.aspx" />
+    <Content Include="Project\Appointment.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Project\UserPanel.Master.cs">
+      <DependentUpon>UserPanel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\UserPanel.Master.designer.cs">
+      <DependentUpon>UserPanel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Project\fonts\fontawesome-webfont.eot" />
+    <Content Include="Project\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Project\fonts\fontawesome-webfont.woff" />
+    <Content Include="Project\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Project\fonts\FontAwesome.otf" />
+    <Content Include="Project\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Project\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Project\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Project\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Project\images\Thumbs.db" />
+    <Content Include="Project\webfonts\fa-brands-400.woff" />
+    <Content Include="Project\webfonts\fa-brands-400.woff2" />
+    <Content Include="Project\webfonts\fa-regular-400.eot" />
+    <Content Include="Project\webfonts\fa-regular-400.ttf" />
+    <Content Include="Project\webfonts\fa-regular-400.woff" />
+    <Content Include="Project\webfonts\fa-regular-400.woff2" />
+    <Content Include="Project\webfonts\fa-solid-900.eot" />
+    <Content Include="Project\webfonts\fa-solid-900.ttf" />
+    <Content Include="Project\webfonts\fa-solid-900.woff" />
+    <Content Include="Project\webfonts\fa-solid-900.woff2" />
+    <Content Include="Project\UserPanel.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59844</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+ 
+</Project>
